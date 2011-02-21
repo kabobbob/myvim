@@ -32,6 +32,9 @@ set smartcase
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc
 
+" Git Info
+set statusline=%{GitBranchInfoString()}
+
 " Status bar
 set laststatus=2
 
