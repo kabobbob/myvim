@@ -10,3 +10,6 @@
 [submodule "bundle/git-branch-info"]
 	path = bundle/git-branch-info
 	url = https://github.com/taq/vim-git-branch-info.git
+[submodule "bundle/vimclojure"]
+	path = bundle/vimclojure
+	url = git://github.com/vim-scripts/VimClojure.git

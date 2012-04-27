@@ -51,7 +51,8 @@ endif
 set guioptions-=T
 
 " Default gui color scheme
-color koehler
+colorscheme torte
+set transparency=15
 
 " ConqueTerm wrapper
 function StartTerm()

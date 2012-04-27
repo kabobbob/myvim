@@ -136,3 +136,7 @@ let macvim_hig_shift_movement = 1
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" clojure
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
