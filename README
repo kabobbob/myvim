@@ -7,8 +7,37 @@ Create symlinks:
     ln -s ~/.vim/vimrc ~/.vimrc
     ln -s ~/.vim/gvimrc ~/.gvimrc
 
-Switch to the `~/.vim` directory, and fetch submodules:
+Switch to the `~/.vim` directory, create backup dir, and fetch submodules:
 
     cd ~/.vim
+    mkdir backup
     git submodule init
     git submodule update
+
+VimClojure clobbers another key map, update
+    diff --git a/doc/clojure.txt b/doc/clojure.txt
+    index e0a3876..eedbbd1 100644
+    --- a/doc/clojure.txt
+    +++ b/doc/clojure.txt
+    @@ -187,7 +187,7 @@ Plug name and your setting will override the default mapping.
+                             place before issueing the command, eg. via scp
+                             or NFS.
+
+    -<LocalLeader>rt                                 *rt* *RunTests*
+    +<LocalLeader>rT                                 *rt* *RunTests*
+                             Require the namespace of the filename with the
+                             :reload flag. Then use clojure.contrib.test-is
+                             to run the tests of the namespace via run-tests.
+    diff --git a/ftplugin/clojure.vim b/ftplugin/clojure.vim
+    index 9863534..a903763 100644
+    --- a/ftplugin/clojure.vim
+    +++ b/ftplugin/clojure.vim
+    @@ -119,7 +119,7 @@ call vimclojure#MapPlug("n", "gi", "GotoSourceInteractive")
+     call vimclojure#MapPlug("n", "rf", "RequireFile")
+     call vimclojure#MapPlug("n", "rF", "RequireFileAll")
+
+    -call vimclojure#MapPlug("n", "rt", "RunTests")
+    +call vimclojure#MapPlug("n", "rT", "RunTests")
+
+     call vimclojure#MapPlug("n", "me", "MacroExpand")
+     call vimclojure#MapPlug("n", "m1", "MacroExpand1")
