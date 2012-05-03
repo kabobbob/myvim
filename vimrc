@@ -12,6 +12,10 @@ set number
 set ruler
 syntax on
 
+" leader key
+set mapleader = ","
+set maplocalleader = ","
+
 " Set encoding
 set encoding=utf-8
 
