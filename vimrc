@@ -12,10 +12,6 @@ set number
 set ruler
 syntax on
 
-" leader key
-set mapleader = ","
-set maplocalleader = ","
-
 " Set encoding
 set encoding=utf-8
 
@@ -140,6 +136,10 @@ let macvim_hig_shift_movement = 1
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" leader key
+let mapleader=","
+let maplocalleader=","
 
 " clojure
 let g:vimclojure#HighlightBuiltins = 1
