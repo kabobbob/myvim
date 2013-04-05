@@ -54,6 +54,9 @@ set guioptions-=T
 colorscheme torte
 set transparency=15
 
+" font
+set guifont=Inconsolata-dz
+
 " ConqueTerm wrapper
 function StartTerm()
   execute 'ConqueTerm ' . $SHELL . ' --login'
@@ -205,3 +208,5 @@ call s:DefineCommand("mkdir", "Mkdir")
 if filereadable(expand("~/.gvimrc.local"))
   source ~/.gvimrc.local
 endif
+
+highlight clear SignColumn
