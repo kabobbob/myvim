@@ -152,3 +152,5 @@ let vimclojure#WantNailgun = 1
 " gitgutter
 highlight clear SignColumn
 let g:gitgutter_sign_column_always = 1
+
+let g:vim_tags_auto_generate = 1
