@@ -55,7 +55,7 @@ colorscheme torte
 set transparency=15
 
 " font
-set guifont=Inconsolata-dz
+set guifont=Inconsolata-dz:h12
 
 " ConqueTerm wrapper
 function StartTerm()
