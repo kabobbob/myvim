@@ -154,3 +154,7 @@ highlight clear SignColumn
 let g:gitgutter_sign_column_always = 1
 
 let g:vim_tags_auto_generate = 1
+
+" vim sessions
+let g:session_autosave = 'no'
+let g:session_autoload = 1
