@@ -33,8 +33,14 @@ set smartcase
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc
 
+" Code folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+
 " Git Info
-set statusline=%{GitBranchInfoString()}
+set statusline=%{GitBranchInfoString()}\ -\ %f
 
 " Status bar
 set laststatus=2
@@ -157,4 +163,15 @@ let g:vim_tags_auto_generate = 1
 
 " vim sessions
 let g:session_autosave = 'no'
-let g:session_autoload = 1
+let g:session_autoload = 'no'
+
+" remap tab key
+nnoremap th  :tabfirst<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>

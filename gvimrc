@@ -57,6 +57,12 @@ set transparency=15
 " font
 set guifont=Inconsolata-dz:h12
 
+" Code folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+
 " ConqueTerm wrapper
 function StartTerm()
   execute 'ConqueTerm ' . $SHELL . ' --login'
