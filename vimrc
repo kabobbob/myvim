@@ -1,56 +1,11 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-filetype on
-filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 syntax enable
 filetype plugin indent on
-
-set nocompatible
 
 set number
 set ruler
@@ -83,26 +38,11 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=1
 
-" Git Info
+" Git Info in status line
 set statusline=%{GitBranchInfoString()}\ -\ %f
 
 " Status bar
 set laststatus=2
-
-" Without setting this, ZoomWin restores windows in a way that causes
-" equalalways behavior to be triggered the next time CommandT is used.
-" This is likely a bludgeon to solve some other issue, but it works
-set noequalalways
-
-" NERDTree configuration
-let NERDTreeIgnore=['\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
-
-" Command-T configuration
-let g:CommandTMaxHeight=20
-
-" ZoomWin configuration
-map <Leader><Leader> :ZoomWin<CR>
 
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
@@ -179,25 +119,10 @@ colorscheme koehler
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" MacVIM shift+arrow-keys behavior (required in .vimrc)
-let macvim_hig_shift_movement = 1
-
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
-
-" leader key
-let mapleader=","
-let maplocalleader=","
-
-" clojure
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
-
-" this should only be necessary if you don't have the ng client in your PATH
-" let vimclojure#NailgunClient = "/path/to/your/ng"
-let vimclojure#WantNailgun = 1
 
 " gitgutter
 highlight clear SignColumn
@@ -223,6 +148,8 @@ nnoremap td  :tabclose<CR>
 " elm autoformat
 let g:elm_format_autosave = 1
 
-" ycm debug
-let g:ycm_server_use_vim_stdout = 0
-let g:ycm_log_level = 'debug'
+" completor
+let g:completor_node_binary = "/Users/bobmcclellan/.nvm/versions/node/v6.9.5/bin/node"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"

@@ -64,3 +64,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "pack/completor/start/completor.vim"]
+	path = pack/completor/start/completor.vim
+	url = https://github.com/maralla/completor.vim.git
