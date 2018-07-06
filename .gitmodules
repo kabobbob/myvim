@@ -2,21 +2,9 @@
 	path = bundle/coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
   ignore = dirty
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-  ignore = dirty
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = https://github.com/wincent/Command-T.git
-  ignore = dirty
 [submodule "bundle/git-branch-info"]
 	path = bundle/git-branch-info
 	url = https://github.com/taq/vim-git-branch-info.git
-  ignore = dirty
-[submodule "bundle/vimclojure"]
-	path = bundle/vimclojure
-	url = git://github.com/vim-scripts/VimClojure.git
   ignore = dirty
 [submodule "bundle/git-vim"]
   path = bundle/git-vim
@@ -29,10 +17,6 @@
 [submodule "bundle/git-support"]
 	path = bundle/git-support
 	url = git://github.com/vim-scripts/Git-Support.git
-  ignore = dirty
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = git@github.com:Valloric/YouCompleteMe.git
   ignore = dirty
 [submodule "bundle/vim-tags"]
 	path = bundle/vim-tags
@@ -65,9 +49,6 @@
 [submodule "bundle/vim-autoformat"]
 	path = bundle/vim-autoformat
 	url = https://github.com/Chiel92/vim-autoformat.git
-[submodule "bundle/Vundle.vim"]
-	path = bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "bundle/elm-vim"]
 	path = bundle/elm-vim
 	url = https://github.com/ElmCast/elm-vim.git
