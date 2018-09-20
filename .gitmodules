@@ -67,3 +67,6 @@
 [submodule "pack/completor/start/completor.vim"]
 	path = pack/completor/start/completor.vim
 	url = https://github.com/maralla/completor.vim.git
+[submodule "bundle/vim-buftabline"]
+	path = bundle/vim-buftabline
+	url = https://github.com/ap/vim-buftabline
