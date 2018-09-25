@@ -149,6 +149,7 @@ let g:session_autoload = 'no'
 set hidden
 nnoremap tj :bprev<CR>
 nnoremap tk :bnext<CR>
+nnoremap cb :bp\|bd #<CR>
 
 " elm autoformat
 let g:elm_format_autosave = 1
@@ -168,3 +169,15 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 "  autocmd!
 "  autocmd VimEnter * :Vexplore
 "augroup END
+
+autocmd vimenter * NERDTree
+
+" typescript-vim compiliation errors
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+" vim-js-pretty-template
+"autocmd FileType typescript JsPreTmpl html
+"autocmd FileType typescript syn clear foldBraces "needed for leafgarland/typesript-vim plugin
