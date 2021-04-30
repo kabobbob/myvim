@@ -170,7 +170,8 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 "  autocmd VimEnter * :Vexplore
 "augroup END
 
-autocmd vimenter * NERDTree
+" start NERDTree on vim start
+" autocmd vimenter * NERDTree
 
 " typescript-vim compiliation errors
 let g:typescript_compiler_binary = 'tsc'
